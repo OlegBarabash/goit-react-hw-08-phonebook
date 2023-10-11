@@ -8,6 +8,7 @@ import { fetchContacts } from 'redux/operations';
 import { useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import toast, { Toaster } from 'react-hot-toast';
+// import { Routes, Route } from 'react-router-dom';
 
 export const App = () => {
   const dispatch = useDispatch();
