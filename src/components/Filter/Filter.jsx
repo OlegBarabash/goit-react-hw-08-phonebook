@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { Label, StyledInput } from '../ContactForm/ContactForm.styled';
+import { Label, StyledInput } from '../Forms.styled';
 import { setContactsFilter } from 'redux/filtersSlice';
 
 export const Filter = () => {

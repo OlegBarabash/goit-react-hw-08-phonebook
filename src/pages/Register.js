@@ -3,7 +3,7 @@ import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
 export default function Register() {
   return (
-    <div>
+    <div style={{ width: '100%' }}>
       <Helmet>
         <title>Registration</title>
       </Helmet>

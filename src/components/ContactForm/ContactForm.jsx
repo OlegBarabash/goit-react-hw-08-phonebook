@@ -6,7 +6,7 @@ import {
   StyledField,
   Button,
   ErrorMsg,
-} from './ContactForm.styled';
+} from '../Forms.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
 import toast, { Toaster } from 'react-hot-toast';

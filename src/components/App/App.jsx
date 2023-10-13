@@ -10,7 +10,7 @@ import { lazy, useEffect } from 'react';
 // import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from 'hooks';
 import { refreshUser } from 'redux/auth/operations';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from 'components/Layout';
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute';
@@ -63,6 +63,7 @@ export const App = () => {
                 />
               }
             />
+            <Route path="*" element={<Navigate to="/" />} />
           </Route>
         </Routes>
       )}
