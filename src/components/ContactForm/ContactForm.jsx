@@ -8,10 +8,10 @@ import {
   ErrorMsg,
 } from '../Forms.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 import toast, { Toaster } from 'react-hot-toast';
 import { MdOutlineWarningAmber } from 'react-icons/md';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()

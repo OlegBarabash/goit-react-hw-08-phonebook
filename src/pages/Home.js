@@ -1,6 +1,6 @@
 const styles = {
   container: {
-    minHeight: 'calc(100vh - 50px)',
+    minHeight: 'calc(100vh - 150px)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -11,7 +11,7 @@ const styles = {
     textAlign: 'center',
   },
 };
-//  -----TO DO-----------------------------------
+
 export default function Home() {
   return (
     <div style={styles.container}>

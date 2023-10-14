@@ -1,13 +1,17 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Helmet } from 'react-helmet';
-import { fetchContacts } from 'redux/operations';
+import { Helmet } from 'react-helmet-async';
+import { fetchContacts } from 'redux/contacts/operations';
 import { ContactForm } from 'components/ContactForm/ContactForm';
-import { ThreeDots } from 'react-loader-spinner';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
 import toast, { Toaster } from 'react-hot-toast';
-import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
+import {
+  selectContacts,
+  selectError,
+  selectIsLoading,
+} from 'redux/contacts/selectors';
+import { Loader } from 'components/Loader/Loader';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -36,22 +40,7 @@ export default function Contacts() {
       ) : (
         <>
           <h2>Contacts</h2>
-          {isLoading ? (
-            <ThreeDots
-              height="72"
-              width="72"
-              radius="8"
-              color="#4fa94d"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-              wrapperClassName=""
-              visible={true}
-            />
-          ) : (
-            <>
-              <Filter />
-            </>
-          )}
+          {isLoading ? <Loader /> : <Filter />}
           {contacts.length > 0 && <ContactList />}
         </>
       )}
